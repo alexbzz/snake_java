@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff2ef34-395f-41e9-bd7f-027f5fac9332" name="Changes" comment="feat: initial project structure with Entity and Snake class" />
+    <list default="true" id="1ff2ef34-395f-41e9-bd7f-027f5fac9332" name="Changes" comment="feat: initial project structure with Entity and Snake class">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,11 +54,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Game.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
     "Application.game.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/alexb/Documents/java/snake_java/snake_java.iml",
     "node.js.detected.package.eslint": "true",
@@ -62,31 +69,16 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="snake" />
-      <option name="VM_PARAMETERS" value="--enable-preview" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="game.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Main" />
-      <module name="snake" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="snake_java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,14 +92,9 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.game.Main" />
-      <item itemvalue="Application.Main" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.game.Main" />
+        <item itemvalue="Application.Unnamed" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +121,8 @@
       <workItem from="1742474280029" duration="63000" />
       <workItem from="1742474356970" duration="5000" />
       <workItem from="1742474367777" duration="94000" />
-      <workItem from="1742474488363" duration="28000" />
+      <workItem from="1742474488363" duration="718000" />
+      <workItem from="1742475222502" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial project structure with Entity and Snake class">
       <option name="closed" value="true" />
@@ -152,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742474013315</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: initial project structure with Entity and Snake class">
+      <option name="closed" value="true" />
+      <created>1742474548710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742474548710</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
