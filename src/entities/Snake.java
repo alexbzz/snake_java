@@ -2,14 +2,15 @@ package entities;
 
 import java.awt.Point;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Snake extends Entity {
-    private LinkedList<Point> body;
+    private final LinkedList<Point> body;
     private int length;
     private String color;
     private int speed;
     private int life;
-    private boolean status; // Actif ou non
+    private boolean status;
     private String skin;
 
     public Snake(Point startPosition, int speed, String color, String skin) {
@@ -41,7 +42,7 @@ public class Snake extends Entity {
     public void grow(int values) {
         this.length += values;
         for (int i = 0; i < values; i++) {
-            body.add(new Point(body.getLast()));
+            body.add(new Point(body.getLast()));  // Ajouter de nouveaux segments à la fin
         }
     }
 
@@ -79,10 +80,10 @@ public class Snake extends Entity {
     public void move() {
         Point newHead = new Point(position);
         switch (direction) {
-            case "UP" -> newHead.y -= speed;
-            case "DOWN" -> newHead.y += speed;
-            case "LEFT" -> newHead.x -= speed;
-            case "RIGHT" -> newHead.x += speed;
+            case "UP" -> newHead.y -= 1;
+            case "DOWN" -> newHead.y += 1;
+            case "LEFT" -> newHead.x -= 1;
+            case "RIGHT" -> newHead.x += 1;
         }
 
         body.addFirst(newHead);
@@ -91,12 +92,20 @@ public class Snake extends Entity {
         }
         position = newHead;
     }
-    public void changeDirection(String up) {
-        switch (direction) {
-            case "UP" -> direction = "UP";
-            case "DOWN" -> direction = "DOWN";
-            case "LEFT" -> direction = "LEFT";
-            case "RIGHT" -> direction = "RIGHT";
-        }
+
+    public void changeDirection(String newDirection) {
+        // Empêche le serpent de faire demi-tour
+        if (direction.equals("UP") && newDirection.equals("DOWN")) return;
+        if (direction.equals("DOWN") && newDirection.equals("UP")) return;
+        if (direction.equals("LEFT") && newDirection.equals("RIGHT")) return;
+        if (direction.equals("RIGHT") && newDirection.equals("LEFT")) return;
+
+        this.direction = newDirection;
+    }
+    public String getDirection() {
+        return direction;
+    }
+    public List<Point> getBody() {
+        return body;
     }
 }
