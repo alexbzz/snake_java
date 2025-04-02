@@ -1,4 +1,4 @@
-import view.LoginWindow;
+package game;
 
 import javax.swing.*;
 
